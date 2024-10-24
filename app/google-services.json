@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "664943221877",
+    "project_id": "gameatlas-149cd",
+    "storage_bucket": "gameatlas-149cd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:664943221877:android:e3266a7922fc4f55856c3c",
+        "android_client_info": {
+          "package_name": "com.example.gameatlas"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDOLrDgLTLv_HT6dXwT62NFpvQWtqprEYc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

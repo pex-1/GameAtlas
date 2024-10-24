@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="what_kind_of_games_do_you_like">What kind of games do you like?</string>
+    <string name="select_at_least_3_genres">Select at least 3 genres</string>
+    <string name="continue_button">Continue</string>
+    <string name="genre_image">Genre Image</string>
+    <string name="check_circle">Check circle</string>
+    <string name="controller_icon">Controller icon</string>
+</resources>

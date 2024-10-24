@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    # ---> Toolbar
+    <string name="open_menu">Open menu</string>
+    <string name="go_back">Go Back</string>
+
+    # ---> Empty state screen
+    <string name="no_data_found">No data found</string>
+    <string name="unable_to_load_data">Unable to load data. Check your network connection and try again!</string>
+    <string name="retry">Retry</string>
+
+    # ---> Design system
+    <string name="placeholder_image">Placeholder image</string>
+    <string name="content_icon">Content icon</string>
+    <string name="broken_controller_icon">Broken controller icon</string>
+
+
+</resources>

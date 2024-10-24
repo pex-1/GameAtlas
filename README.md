@@ -1,11 +1,11 @@
 <h1 align="center">GameAtlas</h1>
 
 <p align="center">RAWG is the largest video game database and game discovery service. This Android application was developed with RAWG API.</p>
-<p align="center">
+<p>
 This app consists of 3 screens: 
-  1. Onboarding screen - user should select at least 3 genres he's interested in
-  2. Home screen - a screen with the list of games from the selected genres
-  3. Details screen - more information about the selected game
+  <br>1. Onboarding screen - user should select at least 3 genres he's interested in
+ <br> 2. Home screen - a screen with a list of games from the selected genres
+ <br> 3. Details screen - more information about the selected game
 </p>
 
 <br><br/>

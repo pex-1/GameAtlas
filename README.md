@@ -18,11 +18,21 @@ This app consists of 3 screens:
 <img height="600" src="readme/screenshots/demo.gif" alt="GameAtlas demo" />
 </p>
 
+## TODO
+- [ ] finish testing
+- [ ] collapse description, add read more option to do so
+- [ ] additional data on the 
+- [ ] settings screen
+- [ ] benchmarking
+- [ ] github actions
+- [ ] firebase app distribution
+
 <br><br/>
 ## Technologies and libraries used
 - MVI
 - Compose
 - Kotlin
+- Modularization
 - Koin
 - Ktor
 - Room

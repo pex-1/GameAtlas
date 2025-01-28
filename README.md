@@ -10,12 +10,12 @@ This app consists of 3 screens:
 
 <br><br/>
 ## Screenshots
-<img src="readme/screenshots/preview2.png" alt="GameAtlas preview" />
+<img src="readme/screenshots/preview.png" alt="HeadlineHunter preview" />
 
 <br><br/>
 ## Demo
 <p align="center">
-<img height="600" src="readme/screenshots/demo.gif" alt="GameAtlas demo" />
+<img height="600" src="readme/screenshots/demo.gif" alt="HeadlineHunter demo" />
 </p>
 
 ## TODO

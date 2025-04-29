@@ -5,6 +5,8 @@ import androidx.compose.animation.AnimatedVisibilityScope
 import androidx.compose.animation.ExperimentalSharedTransitionApi
 import androidx.compose.animation.SharedTransitionLayout
 import androidx.compose.animation.SharedTransitionScope
+import androidx.compose.animation.core.Animatable
+import androidx.compose.animation.core.AnimationVector1D
 import androidx.compose.animation.core.tween
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
@@ -138,7 +140,7 @@ private fun DetailsScreen(
                                     .fillMaxSize()
                                     .let {
                                         if (animationsEnabled)
-                                            it.alpha(fadeInAnimation()) else it
+                                            it.alpha(fadeInAnimation(animatedAlpha = state.fadeAnimation)) else it
                                     }
                                     .background(
                                         brush = Brush.verticalGradient(
@@ -154,7 +156,11 @@ private fun DetailsScreen(
                             Row(
                                 modifier = Modifier
                                     .fillMaxWidth()
-                                    .applyOffsetAndFadeInAnimation(animationsEnabled)
+                                    .applyOffsetAndFadeInAnimation(
+                                        animationsEnabled,
+                                        state.offsetAnimation,
+                                        state.fadeAnimation
+                                    )
                                     .align(Alignment.BottomCenter)
                                     .padding(top = 10.dp, bottom = 12.dp)
                                     .height(28.dp),
@@ -213,7 +219,11 @@ private fun DetailsScreen(
                         Box(
                             modifier = Modifier
                                 .fillMaxWidth()
-                                .applyOffsetAndFadeInAnimation(animationsEnabled)
+                                .applyOffsetAndFadeInAnimation(
+                                    animationsEnabled,
+                                    state.offsetAnimation,
+                                    state.fadeAnimation
+                                )
                                 .padding(vertical = 24.dp)
                                 .height(16.dp),
                             contentAlignment = Alignment.Center
@@ -222,7 +232,11 @@ private fun DetailsScreen(
                         }
 
                         ChipGroup(
-                            modifier = Modifier.applyOffsetAndFadeInAnimation(animationsEnabled),
+                            modifier = Modifier.applyOffsetAndFadeInAnimation(
+                                animationsEnabled,
+                                state.offsetAnimation,
+                                state.fadeAnimation
+                            ),
                             tag = state.game.genres.map { it.name },
                             horizontalAlignment = Alignment.CenterHorizontally
                         )
@@ -230,7 +244,7 @@ private fun DetailsScreen(
                         Text(
                             modifier = Modifier
                                 .padding(top = 20.dp)
-                                .applyOffsetAndFadeInAnimation(animationsEnabled)
+                                .applyOffsetAndFadeInAnimation(animationsEnabled, state.offsetAnimation, state.fadeAnimation)
                                 .width(IntrinsicSize.Max),
                             text = state.game.description,
                             color = Neutral20,
@@ -241,7 +255,11 @@ private fun DetailsScreen(
                         LazyRow(
                             modifier = Modifier
                                 .fillMaxWidth()
-                                .applyOffsetAndFadeInAnimation(animationsEnabled)
+                                .applyOffsetAndFadeInAnimation(
+                                    animationsEnabled,
+                                    state.offsetAnimation,
+                                    state.fadeAnimation
+                                )
                                 .padding(top = 24.dp),
                             state = rememberLazyListState(),
                             horizontalArrangement = Arrangement.spacedBy(20.dp),
@@ -270,12 +288,15 @@ private fun DetailsScreen(
 }
 
 @Composable
-fun Modifier.applyOffsetAndFadeInAnimation(animationsEnabled: Boolean): Modifier {
+fun Modifier.applyOffsetAndFadeInAnimation(
+    animationsEnabled: Boolean,
+    offsetAnimation: Animatable<Float, AnimationVector1D>,
+    fadeAnimation: Animatable<Float, AnimationVector1D> ): Modifier {
     return this.let {
         if (animationsEnabled) {
             it
-                .offset(y = offsetAnimation())
-                .alpha(fadeInAnimation())
+                .offset(y = offsetAnimation(animatedOffset = offsetAnimation))
+                .alpha(fadeInAnimation(animatedAlpha = fadeAnimation))
         } else it
     }
 }

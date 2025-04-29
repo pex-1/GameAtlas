@@ -1,10 +1,9 @@
 package com.example.core.database.dao.di
 
 import androidx.room.Room
-import com.example.core.domain.game.LocalDataSource
+import com.example.core.domain.LocalDataSource
 import com.example.core.database.GamesDatabase
 import com.example.core.database.RoomLocalDataSource
-import com.example.core.database.util.DatabaseConstants
 import org.koin.android.ext.koin.androidApplication
 import org.koin.core.module.dsl.singleOf
 import org.koin.dsl.bind

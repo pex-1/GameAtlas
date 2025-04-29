@@ -9,9 +9,7 @@ import androidx.paging.map
 import com.example.core.database.entity.GameEntity
 import com.example.core.domain.details.GameDetails
 import com.example.core.domain.game.Game
-import com.example.core.domain.game.GameId
-import com.example.core.domain.game.GenreId
-import com.example.core.domain.game.LocalDataSource
+import com.example.core.domain.LocalDataSource
 import com.example.core.domain.genre.Genre
 import com.example.core.domain.util.DataError
 import com.example.core.domain.util.Result
@@ -22,6 +20,8 @@ import com.example.core.database.mappers.toGenre
 import com.example.core.database.mappers.toGenreEntity
 import com.example.core.database.paging.GameRemoteMediator
 import com.example.core.database.util.DatabaseConstants
+import com.example.core.domain.GameId
+import com.example.core.domain.GenreId
 import com.example.core.domain.RemoteDataSource
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.map

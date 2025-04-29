@@ -5,7 +5,7 @@ import com.example.core.domain.GameRepository
 import com.example.core.domain.RemoteDataSource
 import com.example.core.domain.details.GameDetails
 import com.example.core.domain.game.Game
-import com.example.core.domain.game.LocalDataSource
+import com.example.core.domain.LocalDataSource
 import com.example.core.domain.genre.Genre
 import com.example.core.domain.util.DataError
 import com.example.core.domain.util.EmptyResult

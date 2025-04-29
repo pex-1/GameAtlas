@@ -1,7 +1,7 @@
 package com.example.core.database.di
 
 import androidx.room.Room
-import com.example.core.domain.game.LocalDataSource
+import com.example.core.domain.LocalDataSource
 import com.example.core.database.GamesDatabase
 import com.example.core.database.RoomLocalDataSource
 import com.example.core.database.util.DatabaseConstants

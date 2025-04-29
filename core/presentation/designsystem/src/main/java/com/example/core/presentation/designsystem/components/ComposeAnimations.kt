@@ -3,6 +3,7 @@ package com.example.core.presentation.designsystem.components
 import androidx.compose.animation.core.Animatable
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.animation.AnimatedVisibilityScope
+import androidx.compose.animation.core.AnimationVector1D
 import androidx.compose.animation.core.EaseInOut
 import androidx.compose.animation.core.FastOutLinearInEasing
 import androidx.compose.animation.core.tween
@@ -35,10 +36,8 @@ fun InitialFadeIn(
 fun fadeInAnimation(
     durationMs: Int = ANIMATION_DURATION,
     delay: Int = ANIMATION_DELAY,
+    animatedAlpha: Animatable<Float, AnimationVector1D>
 ): Float {
-    val animatedAlpha = remember {
-        Animatable(0f)
-    }
     LaunchedEffect(true) {
         animatedAlpha.animateTo(
                 targetValue = 1f,
@@ -59,10 +58,8 @@ const val ANIMATION_DURATION = 500
 fun offsetAnimation(
     durationMs: Int = ANIMATION_DURATION,
     delay: Int = ANIMATION_DELAY,
+    animatedOffset: Animatable<Float, AnimationVector1D>
 ): Dp {
-    val animatedOffset = remember {
-        Animatable(100f)
-    }
     LaunchedEffect(key1 = true) {
         animatedOffset.animateTo(
             targetValue = 0f,

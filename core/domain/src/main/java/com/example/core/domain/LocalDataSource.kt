@@ -1,7 +1,8 @@
-package com.example.core.domain.game
+package com.example.core.domain
 
 import androidx.paging.PagingData
 import com.example.core.domain.details.GameDetails
+import com.example.core.domain.game.Game
 import com.example.core.domain.genre.Genre
 import com.example.core.domain.util.DataError
 import com.example.core.domain.util.Result
